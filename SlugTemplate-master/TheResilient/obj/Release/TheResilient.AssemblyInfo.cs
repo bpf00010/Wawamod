@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TheResilient")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4b6fb7ac615b18cd9ad5c2236c7e9aff3089970f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5e5948d87f6b33aee8b6958129fcf7df9292e338")]
 [assembly: System.Reflection.AssemblyProductAttribute("TheResilient")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TheResilient")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

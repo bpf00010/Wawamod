@@ -2,8 +2,12 @@
   "ExpandedNodes": [
     "",
     "\\SlugTemplate-master",
-    "\\SlugTemplate-master\\TheResilient"
+    "\\SlugTemplate-master\\mod",
+    "\\SlugTemplate-master\\mod\\slugbase",
+    "\\SlugTemplate-master\\TheResilient",
+    "\\SlugTemplate-master\\TheResilient\\bin",
+    "\\SlugTemplate-master\\TheResilient\\obj"
   ],
-  "SelectedNode": "\\SlugTemplate-master",
+  "SelectedNode": "\\SlugTemplate-master\\mod\\slugbase\\theresilient.json",
   "PreviewInSolutionExplorer": false
 }

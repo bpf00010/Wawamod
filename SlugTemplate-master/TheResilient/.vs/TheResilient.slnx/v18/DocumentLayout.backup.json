@@ -3,6 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\Brenden Furlong\\Documents\\Wawamod\\SlugTemplate-master\\TheResilient\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Brenden Furlong\\Documents\\Wawamod\\SlugTemplate-master\\mod\\slugbase\\theresilient.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Brenden Furlong\\Documents\\Wawamod\\SlugTemplate-master\\mod\\modinfo.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{D71FF3F9-9595-3875-E9C9-CD12CF4502F3}|TheResilient.csproj|c:\\users\\brenden furlong\\documents\\wawamod\\slugtemplate-master\\theresilient\\theresilient.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{D71FF3F9-9595-3875-E9C9-CD12CF4502F3}|TheResilient.csproj|solutionrelative:theresilient.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     }
@@ -18,11 +24,35 @@
           "Children": [
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{c6f34f0d-7ae5-4f3a-be61-fe0c21ae9eb8}"
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "theresilient.json",
+              "DocumentMoniker": "C:\\Users\\Brenden Furlong\\Documents\\Wawamod\\SlugTemplate-master\\mod\\slugbase\\theresilient.json",
+              "RelativeDocumentMoniker": "..\\mod\\slugbase\\theresilient.json",
+              "ToolTip": "C:\\Users\\Brenden Furlong\\Documents\\Wawamod\\SlugTemplate-master\\mod\\slugbase\\theresilient.json",
+              "RelativeToolTip": "..\\mod\\slugbase\\theresilient.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-10-18T15:19:48.62Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "modinfo.json",
+              "DocumentMoniker": "C:\\Users\\Brenden Furlong\\Documents\\Wawamod\\SlugTemplate-master\\mod\\modinfo.json",
+              "RelativeDocumentMoniker": "..\\mod\\modinfo.json",
+              "ToolTip": "C:\\Users\\Brenden Furlong\\Documents\\Wawamod\\SlugTemplate-master\\mod\\modinfo.json",
+              "RelativeToolTip": "..\\mod\\modinfo.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-10-18T15:18:56.835Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "TheResilient.csproj",
               "DocumentMoniker": "C:\\Users\\Brenden Furlong\\Documents\\Wawamod\\SlugTemplate-master\\TheResilient\\TheResilient.csproj",
               "RelativeDocumentMoniker": "TheResilient.csproj",
@@ -30,8 +60,7 @@
               "RelativeToolTip": "TheResilient.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAADcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-10-17T03:02:05.769Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-17T03:02:05.769Z"
             }
           ]
         }
