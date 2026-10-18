@@ -1,0 +1,1 @@
+Use W, S and the spacebar to select an effect to edit. Press N to return to the new effects menu.

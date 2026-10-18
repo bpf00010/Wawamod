@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net48</TargetFramework>
+		<LangVersion>latest</LangVersion>
+		<Nullable>disable</Nullable>
+		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+	</PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="BepInEx">
+      <HintPath>$(UserProfile)\Downloads\TheResilient - Copy\TheResilient - Copy\BobbleWeedScug\bin\Debug\net8.0\BepInEx.dll</HintPath>
+    </Reference>
+    <Reference Include="HOOKS-Assembly-CSharp">
+      <HintPath>$(UserProfile)\Downloads\TheResilient - Copy\TheResilient - Copy\BobbleWeedScug\bin\Debug\net8.0\HOOKS-Assembly-CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>$(UserProfile)\Downloads\TheResilient - Copy\TheResilient - Copy\BobbleWeedScug\bin\Debug\net8.0\PUBLIC-Assembly-CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine">
+      <HintPath>$(UserProfile)\Downloads\TheResilient - Copy\TheResilient - Copy\BobbleWeedScug\bin\Debug\net8.0\UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>$(UserProfile)\Downloads\TheResilient - Copy\TheResilient - Copy\BobbleWeedScug\bin\Debug\net8.0\UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

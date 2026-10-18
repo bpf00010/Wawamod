@@ -1,0 +1,36 @@
+C:\Users\Klovar\source\repos\TheResilient\BobbleWeedScug\bin\Debug\net8.0\TheResilient.deps.json
+C:\Users\Klovar\source\repos\TheResilient\BobbleWeedScug\bin\Debug\net8.0\TheResilient.dll
+C:\Users\Klovar\source\repos\TheResilient\BobbleWeedScug\bin\Debug\net8.0\TheResilient.pdb
+C:\Users\Klovar\source\repos\TheResilient\BobbleWeedScug\bin\Debug\net8.0\BepInEx.dll
+C:\Users\Klovar\source\repos\TheResilient\BobbleWeedScug\bin\Debug\net8.0\HOOKS-Assembly-CSharp.dll
+C:\Users\Klovar\source\repos\TheResilient\BobbleWeedScug\bin\Debug\net8.0\PUBLIC-Assembly-CSharp.dll
+C:\Users\Klovar\source\repos\TheResilient\BobbleWeedScug\bin\Debug\net8.0\UnityEngine.CoreModule.dll
+C:\Users\Klovar\source\repos\TheResilient\BobbleWeedScug\bin\Debug\net8.0\UnityEngine.dll
+C:\Users\Klovar\source\repos\TheResilient\BobbleWeedScug\obj\Debug\net8.0\TheResilient.csproj.AssemblyReference.cache
+C:\Users\Klovar\source\repos\TheResilient\BobbleWeedScug\obj\Debug\net8.0\TheResilient.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Klovar\source\repos\TheResilient\BobbleWeedScug\obj\Debug\net8.0\TheResilient.AssemblyInfoInputs.cache
+C:\Users\Klovar\source\repos\TheResilient\BobbleWeedScug\obj\Debug\net8.0\TheResilient.AssemblyInfo.cs
+C:\Users\Klovar\source\repos\TheResilient\BobbleWeedScug\obj\Debug\net8.0\TheResilient.csproj.CoreCompileInputs.cache
+C:\Users\Klovar\source\repos\TheResilient\BobbleWeedScug\obj\Debug\net8.0\TheResil.962C58DF.Up2Date
+C:\Users\Klovar\source\repos\TheResilient\BobbleWeedScug\obj\Debug\net8.0\TheResilient.dll
+C:\Users\Klovar\source\repos\TheResilient\BobbleWeedScug\obj\Debug\net8.0\refint\TheResilient.dll
+C:\Users\Klovar\source\repos\TheResilient\BobbleWeedScug\obj\Debug\net8.0\TheResilient.pdb
+C:\Users\Klovar\source\repos\TheResilient\BobbleWeedScug\obj\Debug\net8.0\ref\TheResilient.dll
+C:\Users\Brenden Furlong\Documents\Wawamod\SlugTemplate-master\TheResilient\obj\Debug\net8.0\TheResilient.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Brenden Furlong\Documents\Wawamod\SlugTemplate-master\TheResilient\obj\Debug\net8.0\TheResilient.AssemblyInfoInputs.cache
+C:\Users\Brenden Furlong\Documents\Wawamod\SlugTemplate-master\TheResilient\obj\Debug\net8.0\TheResilient.AssemblyInfo.cs
+C:\Users\Brenden Furlong\Documents\Wawamod\SlugTemplate-master\TheResilient\obj\Debug\net8.0\TheResilient.csproj.CoreCompileInputs.cache
+C:\Users\Brenden Furlong\Documents\Wawamod\SlugTemplate-master\TheResilient\obj\Debug\net8.0\TheResilient.dll
+C:\Users\Brenden Furlong\Documents\Wawamod\SlugTemplate-master\TheResilient\obj\Debug\net8.0\refint\TheResilient.dll
+C:\Users\Brenden Furlong\Documents\Wawamod\SlugTemplate-master\TheResilient\obj\Debug\net8.0\TheResilient.pdb
+C:\Users\Brenden Furlong\Documents\Wawamod\SlugTemplate-master\TheResilient\bin\Debug\net8.0\TheResilient.deps.json
+C:\Users\Brenden Furlong\Documents\Wawamod\SlugTemplate-master\TheResilient\bin\Debug\net8.0\TheResilient.dll
+C:\Users\Brenden Furlong\Documents\Wawamod\SlugTemplate-master\TheResilient\bin\Debug\net8.0\TheResilient.pdb
+C:\Users\Brenden Furlong\Documents\Wawamod\SlugTemplate-master\TheResilient\bin\Debug\net8.0\BepInEx.dll
+C:\Users\Brenden Furlong\Documents\Wawamod\SlugTemplate-master\TheResilient\bin\Debug\net8.0\HOOKS-Assembly-CSharp.dll
+C:\Users\Brenden Furlong\Documents\Wawamod\SlugTemplate-master\TheResilient\bin\Debug\net8.0\PUBLIC-Assembly-CSharp.dll
+C:\Users\Brenden Furlong\Documents\Wawamod\SlugTemplate-master\TheResilient\bin\Debug\net8.0\UnityEngine.CoreModule.dll
+C:\Users\Brenden Furlong\Documents\Wawamod\SlugTemplate-master\TheResilient\bin\Debug\net8.0\UnityEngine.dll
+C:\Users\Brenden Furlong\Documents\Wawamod\SlugTemplate-master\TheResilient\obj\Debug\net8.0\TheResilient.csproj.AssemblyReference.cache
+C:\Users\Brenden Furlong\Documents\Wawamod\SlugTemplate-master\TheResilient\obj\Debug\net8.0\TheResil.962C58DF.Up2Date
+C:\Users\Brenden Furlong\Documents\Wawamod\SlugTemplate-master\TheResilient\obj\Debug\net8.0\ref\TheResilient.dll

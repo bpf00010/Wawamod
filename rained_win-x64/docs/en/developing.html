@@ -1,0 +1,1408 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="resources.html">
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="img/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Developing - Rained</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+        <script src="https://unpkg.com/iframe-worker/shim"></script>
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#developing" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="index.html" title="Rained" class="md-header__button md-logo" aria-label="Rained" data-md-component="logo">
+      
+  <img src="img/favicon.ico" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Rained
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Developing
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="index.html" title="Rained" class="md-nav__button md-logo" aria-label="Rained" data-md-component="logo">
+      
+  <img src="img/favicon.ico" alt="logo">
+
+    </a>
+    Rained
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Manual
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Manual
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="brief.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Brief
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="install-updates.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installation and Updates
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="user-interface.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    User interface
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Editing the level
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Editing the level
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="overview.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="env.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Environment
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="geo.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Geometry
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="tiles.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tiles
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="selection.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cell selection
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="cameras.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cameras
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="light.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Light
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="effects.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Effects
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="props.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Props
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="rendering.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Rendering and playing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="asset-manager.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Asset manager
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="scripting.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Scripting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="cmd-interface.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Command-line interface
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="resources.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Further reading
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Developing
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="developing.html" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Developing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#using-angle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Using ANGLE
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#building" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Building
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Building">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Setup
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#building-the-app" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Building the app
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Building the app">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#net-cli-and-cake" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        .NET CLI and Cake
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#net-cli-alone" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        .NET CLI alone
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shaders" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Shaders
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Documentation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#subprojects" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Subprojects
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-imgui-ini-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The ImGui .ini file
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-nightly-tag" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The "nightly" tag
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#using-angle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Using ANGLE
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#building" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Building
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Building">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Setup
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#building-the-app" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Building the app
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Building the app">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#net-cli-and-cake" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        .NET CLI and Cake
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#net-cli-alone" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        .NET CLI alone
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shaders" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Shaders
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Documentation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#subprojects" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Subprojects
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-imgui-ini-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The ImGui .ini file
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-nightly-tag" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The "nightly" tag
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="developing">Developing</h1>
+<p>This document is for those who want to develop/modify Rained. Rained is an open-source project under the MIT license, so you are basically free to do whatever you want with it and its source as long as proper attribution is given as stated in the license. You may also contribute to Rained's development making pull requests; those are completely welcome. Some instructions here are provided in the root README.md file
+of the GitHub repository, but this document further details the development setup.</p>
+<h2 id="using-angle">Using ANGLE</h2>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>TL;DR: If you are on Windows, copy the DLLs in <code>src\Glib\angle\win-x64</code> to <code>C:\Program Files\dotnet</code>.</p>
+</div>
+<p>For Windows, Rained prefers to use <a href="https://chromium.googlesource.com/angle/angle">ANGLE</a>, an OpenGL ES implementation for various graphics APIs. On other operating systems, Rained will prefer to use desktop OpenGL 3.3. The reasoning for this is that Windows OpenGL drivers can be a bit quirky, so to speak, and depending on the user's driver vendor, badly optimized. Also, I kept getting reports of OpenGL errors of a mysterious origin, and I (possibly incorrectly) suspected it had to do with faulty OpenGL drivers, although that bug has been fixed by now.</p>
+<p>ANGLE is provided by a set of DLLs that takes a lot of waiting to build. Fortunately, pre-built ANGLE binaries for both Windows and Linux are stored in this repository, both of which I took from an Electron project for the respective systems because I couldn't figure out how to build it myself.</p>
+<p>However, there is a hiccup with the referencing of the DLLs for Rained. Since whatever searches for the ANGLE DLLs does not go through the C# DLL resolver, that means that the ANGLE DLLs <em>must</em> either be in the system's library directories, LD_LIBRARY_PATH (on Unix), or the same folder as the running executable (on Windows). There is no problem here for release packages, since it needs to be put there anyway, but when running from a non-publish build there are two ways Rained can be launched and neither of them have the ANGLE DLLs automatically put in the directories of the executables.</p>
+<p>If the program is being ran via <code>dotnet Rained.dll</code>, the ANGLE DLLs need to be present in the directory where <code>dotnet.exe</code> is located, otherwise the program will fail to start. If the program is being ran by running Rained.exe directly, the ANGLE DLLs need to be present in the build directory containing Rained.exe. You can alternatively copy the ANGLE DLLs to a directory that's referenced in the DLL search path, and it should work just fine for both launch situations.</p>
+<p>If you don't feel like doing all of this, there is a way to build Rained with desktop OpenGL that doesn't have all this DLL nonsense as a prerequisite. How to do so is explained later in this document.</p>
+<h2 id="building">Building</h2>
+<p>Prerequisities:</p>
+<ul>
+<li>.NET Core toolchain</li>
+<li>Python 3</li>
+<li><em>(optional)</em> OpenGL ES driver or <a href="src/Glib/angle">ANGLE libraries</a> in the DLL search path.</li>
+<li><em>(optional)</em> <a href="https://github.com/KhronosGroup/glslang">glslang</a> CLI</li>
+</ul>
+<h3 id="setup">Setup</h3>
+<ol>
+<li>
+<p>Clone repository with Git:
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>--recursive<span class="w"> </span>https://github.com/pkhead/rained
+<span class="nb">cd</span><span class="w"> </span>rained
+</code></pre></div></p>
+</li>
+<li>
+<p>Compile Drizzle and run exporter (rerun this whenever you update Drizzle)
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>src/Drizzle
+dotnet<span class="w"> </span>run<span class="w"> </span>--project<span class="w"> </span>Drizzle.Transpiler
+<span class="nb">cd</span><span class="w"> </span>../..
+dotnet<span class="w"> </span>run<span class="w"> </span>--project<span class="w"> </span>src/DrizzleExport.Console<span class="w"> </span>effects<span class="w"> </span>src/Rained/Assets/effects.json
+</code></pre></div></p>
+</li>
+<li>
+<p>Generate Lua API (rerun this whenever you update ImGui)
+<div class="highlight"><pre><span></span><code>python3<span class="w"> </span>tools/lua-imgui-gen.py
+</code></pre></div></p>
+</li>
+</ol>
+<h3 id="building-the-app">Building the app</h3>
+<h4 id="net-cli-and-cake">.NET CLI and Cake</h4>
+<div class="highlight"><pre><span></span><code><span class="c1"># only needs to be run once</span>
+dotnet<span class="w"> </span>tool<span class="w"> </span>restore
+
+<span class="c1"># usage of desktop GL or GLES/ANGLE is determined by OS.</span>
+dotnet<span class="w"> </span>cake
+
+<span class="c1"># alternative build command with desktop GL forced on.</span>
+dotnet<span class="w"> </span>cake<span class="w"> </span>--gles<span class="o">=</span><span class="nb">false</span>
+</code></pre></div>
+<p>Run the project!
+<div class="highlight"><pre><span></span><code>dotnet<span class="w"> </span>run<span class="w"> </span>--no-build<span class="w"> </span>--project<span class="w"> </span>src/Rained/Rained.csproj
+</code></pre></div></p>
+<h4 id="net-cli-alone">.NET CLI alone</h4>
+<p>This is a translation of the Cake build script:
+<div class="highlight"><pre><span></span><code><span class="c1"># validate/compile updated shader source files</span>
+<span class="c1"># if you don't have glslangValidator, just skip these steps.</span>
+python3<span class="w"> </span>tools/shader-preprocessor.py<span class="w"> </span>gl330
+python3<span class="w"> </span>tools/shader-preprocessor.py<span class="w"> </span>gles300
+
+<span class="c1"># you have three options here:</span>
+dotnet<span class="w"> </span>build<span class="w"> </span>src/Rained/Rained.csproj<span class="w"> </span>/p:GL<span class="o">=</span>ES<span class="w">      </span><span class="c1"># you can build with ES/ANGLE</span>
+dotnet<span class="w"> </span>build<span class="w"> </span>src/Rained/Rained.csproj<span class="w"> </span>/p:GL<span class="o">=</span>Desktop<span class="w"> </span><span class="c1"># or you can build with normal OpenGL</span>
+dotnet<span class="w"> </span>build<span class="w"> </span>src/Rained/Rained.csproj<span class="w">               </span><span class="c1"># this will auto-select based on OS. windows = GLES/ANGLE, linux = OpenGL</span>
+</code></pre></div></p>
+<p>I unfortunately have no steps for setting up the build process in IDEs such as Visual Studio or the JetBrains one, because I
+don't use those. But hopefully, you will be able to extrapolate the information from these instructions to work with your IDE of choice.</p>
+<h2 id="shaders">Shaders</h2>
+<p>If you ever want to create new shaders or modify existing ones, you will need to run them through the shader preprocessor. The shader preprocessor exists for shader sources to include other shader files---something which OpenGL shader compilation doesn't support out of the box---and to handle differences between normal GLSL and ES GLSL.</p>
+<p>In order to use the shader preprocessor, you will need Python 3 and <a href="https://github.com/KhronosGroup/glslang">glslang</a> installed on your system. I don't believe glslang has an installer, but you need to install it in a way such that typing <code>glslangValidator</code> from any terminal will run the correct executable, which you do by modifying your system or user PATH.</p>
+<p>Once you have both installed, the shader preprocessor will automatically run when calling <code>dotnet cake</code>. Although without the required software installed, the preprocessing step will simply be skipped.</p>
+<h2 id="documentation">Documentation</h2>
+<p>The documentation is built using <a href="https://squidfunk.github.io/mkdocs-material/">Material for MkDocs</a>. You'll need python and pip to build it.</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># install material for mkdocs</span>
+pip<span class="w"> </span>install<span class="w"> </span>mkdocs-material
+
+<span class="c1"># serve docs on http://localhost:8000</span>
+mkdocs<span class="w"> </span>serve
+
+<span class="c1"># build doc site</span>
+mkdocs<span class="w"> </span>build
+</code></pre></div>
+<h2 id="subprojects">Subprojects</h2>
+<p>Rained has multiple projects in the C# solution. Here is a list of their brief descriptions:</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Drizzle</strong></td>
+<td>Port of the original renderer from Lingo to C#.</td>
+</tr>
+<tr>
+<td><strong>Glib</strong></td>
+<td>OpenGL 3.3/OpenGL ES 2.0 and Silk.NET wrapper.</td>
+</tr>
+<tr>
+<td><strong>Glib.ImGui</strong></td>
+<td>ImGui.NET backend for Glib/Silk.NET.</td>
+</tr>
+<tr>
+<td><strong>Glib.Tests</strong></td>
+<td>Test program for Glib visual output.</td>
+</tr>
+<tr>
+<td><strong>ImGui.NET</strong></td>
+<td>Freetype-enabled version of ImGui.NET.</td>
+</tr>
+<tr>
+<td><strong>Rained</strong></td>
+<td>The entire Rained application.</td>
+</tr>
+<tr>
+<td><strong>Rained.Console</strong></td>
+<td>C application to launch Rained from a console environment.</td>
+</tr>
+<tr>
+<td><strong>Rained.Tests</strong></td>
+<td>A few unit tests for Rained's Lingo parser</td>
+</tr>
+<tr>
+<td><strong>DrizzleExport</strong></td>
+<td>Library to export Drizzle effect data to a .json file</td>
+</tr>
+<tr>
+<td><strong>DrizzleExport.Console</strong></td>
+<td>Basic console interface to DrizzleExport.</td>
+</tr>
+</tbody>
+</table>
+<p>There is also <a href="https://github.com/pkhead/rainedvm">rainedvm</a>, which is a separate program that serves as a version manager utility. It is programmed in C++ and distributed separately, which is why it is a separate repository.</p>
+<h2 id="the-imgui-ini-file">The ImGui .ini file</h2>
+<p>Previously the <code>config/imgui.ini</code> file was kept track in version control because an initial imgui.ini file is required for correct window positioning. It was a bit problematic, however, since not only would it always reflect window changes made by the developer on their latest run, it seems to change on a Rained launch even if you don't mess with any windows. Obviously, it's not preferable to have the imgui.ini file be included in every commit</p>
+<p>However, as of <a href="https://github.com/pkhead/rained/commit/ddfafe2c6d468a49cc2dee6d937a8ac367fe037c">commit ddfafe2</a>, it is no longer necessary to keep it in version control since Rained will now generate an imgui.ini file from a programmer-given base file if it doesn't exist, and it thusly has been removed from version control.</p>
+<p>Still, below are practices for how to deal with the imgui.ini file if it is in version control:</p>
+<ol>
+<li>Run <code>git update-index --assume-unchanged config/imgui.ini</code>. This will make Git ignore any changes to the file, though
+   it may cause problems when switching branches. You can use <code>git stash</code> in this situation. If you want to undo this,
+   run <code>git update-index --no-assume-unchanged config/imgui.ini</code>.</li>
+<li>Remember to manually unstage config/imgui.ini before every commit, or manually stage every file but that one.</li>
+</ol>
+<h2 id="the-nightly-tag">The "nightly" tag</h2>
+<p>The "nightly" tag really only exists so that I'm able to create nightly GitHub releases. It's a bit annoying. I wouldn't recommend interacting with it.</p>
+<p>Since the action deletes and re-creates the "nightly" tag on every release, in order to update the tag
+on your clone (not that you would want to, I suppose), you would have to run the following Git commands:
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>tag<span class="w"> </span>-d<span class="w"> </span>nightly<span class="w"> </span><span class="c1"># delete the nightly tag on your clone</span>
+git<span class="w"> </span>fetch<span class="w"> </span>origin<span class="w"> </span>tag<span class="w"> </span>nightly<span class="w"> </span><span class="c1"># fetch the nightly tag from origin</span>
+<span class="c1"># running `git fetch` or `git pull` itself after deleting the tag should also work.</span>
+</code></pre></div></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["content.tabs.link"], "search": "assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>

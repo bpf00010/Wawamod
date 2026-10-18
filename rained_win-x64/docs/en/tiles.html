@@ -1,0 +1,1485 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="geo.html">
+      
+      
+        <link rel="next" href="selection.html">
+      
+      
+        
+      
+      
+      <link rel="icon" href="img/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Tiles - Rained</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+        <script src="https://unpkg.com/iframe-worker/shim"></script>
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#tiles" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="index.html" title="Rained" class="md-header__button md-logo" aria-label="Rained" data-md-component="logo">
+      
+  <img src="img/favicon.ico" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Rained
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Tiles
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="index.html" title="Rained" class="md-nav__button md-logo" aria-label="Rained" data-md-component="logo">
+      
+  <img src="img/favicon.ico" alt="logo">
+
+    </a>
+    Rained
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Manual
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Manual
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="brief.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Brief
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="install-updates.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installation and Updates
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="user-interface.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    User interface
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Editing the level
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Editing the level
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="overview.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="env.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Environment
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="geo.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Geometry
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tiles
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="tiles.html" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tiles
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#materials" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Materials
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Materials">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#selection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Selection
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#placement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Placement
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modifiers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Modifiers
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tiles_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tiles
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tiles">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#placement_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Placement
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#geometry-specificationsrequirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Geometry Specifications/Requirements
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modifiers_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Modifiers
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#heads-and-bodies" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Heads and Bodies
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tile-graphics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tile Graphics
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#autotiles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Autotiles
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Autotiles">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Types
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Types">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rectangle-autotiles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rectangle autotiles
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#path-autotiles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Path autotiles
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#custom-autotiles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Custom autotiles
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="selection.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cell selection
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="cameras.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cameras
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="light.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Light
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="effects.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Effects
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="props.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Props
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="rendering.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Rendering and playing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="asset-manager.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Asset manager
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="scripting.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Scripting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="cmd-interface.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Command-line interface
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="resources.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Further reading
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="developing.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Developing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#materials" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Materials
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Materials">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#selection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Selection
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#placement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Placement
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modifiers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Modifiers
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tiles_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tiles
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tiles">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#placement_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Placement
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#geometry-specificationsrequirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Geometry Specifications/Requirements
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modifiers_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Modifiers
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#heads-and-bodies" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Heads and Bodies
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tile-graphics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tile Graphics
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#autotiles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Autotiles
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Autotiles">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Types
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Types">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rectangle-autotiles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rectangle autotiles
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#path-autotiles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Path autotiles
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#custom-autotiles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Custom autotiles
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="tiles">Tiles</h1>
+<p><img alt="Level shown in the tiles mode." src="img/tile-editor.png" />
+The tile editor is where you decorate the level with materials and tiles. Editing tiles and materials is a crucial part of the level editing process, and is normally done after creating an initial block-out of the level in the geometry editor, and usually afterwards is worked on in tandem with the geometry editor. Forming a basic understanding of the principles of tiling is key to designing a good-looking level (although this manual will not delve into the general principles of tile design).</p>
+<h2 id="materials">Materials</h2>
+<figure>
+    <img alt="Section of a level with many material cells." src="img/materials.png" />
+    <figcaption>Section of a level with many materials.</figcaption>
+</figure>
+<p>Materials are used to essentially apply textures to the geometry of your level. I say "essentially", because different materials have different processes of detailing the geometry. Some are simply large repeated textures overlaid onto the affected area, some add certain graphics onto edges and corners, and some, like the Trash family and Small Pipes, are procedurally generated details.</p>
+<h3 id="selection">Selection</h3>
+<p>Material editing can be accessed by switching to the "Materials" tab in the tile selector window. With that tab active, you can select which material you want to paint the level with. The left column shows the list of material categories, and the right column shows the list of materials available for the selected category. Furthermore, hovering over an item on the right column will show a pop-up preview of the material's graphics over the mouse.</p>
+<h3 id="placement">Placement</h3>
+<p>Applied materials are shown in the level view as small solid-colored squares positioned in the center of a cell.</p>
+<p>To paint geometry with a material, simply hold down the left mouse button. To erase materials from geometry, hold down the right mouse button. You can also change the size of the brush by holding down <kbd>Shift</kbd> and using the scroll wheel. Additionally, holding down <kbd>Shift</kbd> and the left or right mouse button and then dragging your mouse will allow you to fill or erase a rectangular area.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Materials will not be visualized if the cell is also occupied by a tile. Removing the tile will expose the material underneath, but any materials obscured by tiles will not be saved in the file, due to a limitation of the level editor save format.</p>
+</div>
+<h3 id="modifiers">Modifiers</h3>
+<p>There are two placement/erasure modifiers you can use while painting. The first is "Force Geometry", which is activated by holding down the <kbd>G</kbd> key. This will allow you to paint onto empty space, where Rained will then automatically place wall geometry onto the area to allow the material to be placed. The second is "Disallow Overwrite", activated by holding down the <kbd>R</kbd> key. It will prevent overwriting materials in cells, making it so you can only draw on cells without an already assigned material. It can also be active simultaneously with the "Force Geometry" modifier.</p>
+<h2 id="tiles_1">Tiles</h2>
+<p>A tile is a premade visual asset that you can place in a level. Each tile was drawn by someone using image editing software, depicting things such as metal beams, pipes, stones, machines, and other set pieces.</p>
+<p>Functionally, they behave similarly to tiles in tile-based games/level editors, but there are a few things specific to Rain World's version of tiles.</p>
+<ul>
+<li>Tiles can be of any grid-aligned width and height.</li>
+<li>Each tile has a geometry specification, which limits/forces the pattern of geometry the tile can be placed on.</li>
+<li>Tiles can have one or two layers of depth.</li>
+<li>Parts of a tile can be removed and the tile will still render as normal.</li>
+</ul>
+<h3 id="placement_1">Placement</h3>
+<p>In order to place a tile, you first must select the tile you want to place in the tile selector, depicted below. The left column displays tile categories, and the right column displays tiles in the currently selected tile category. Hovering over an item in the right column will show a pop-up preview of the tile, and clicking on it will select that tile.</p>
+<figure>
+    <img alt="The tile selector." src="img/tile-selector.png" />
+    <figcaption>The tile selector.</figcaption>
+</figure>
+<p>With a tile selected and your mouse over the level view, a preview of the tile will display over your mouse, which is called the "tile cursor". Pressing down the left mouse button will place down the tile at that position. and pressing down the right mouse button will remove the tile at the cell that is being hovered over. You can also place or remove a rectangular area of tiles by holding <kbd>Shift</kbd> before pressing either the left or right mouse button.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>You may switch work layers either by pressing <kbd>Tab</kbd> or interacting with the "Work Layer" input box located on the very top of the "Tile Selector" window. </p>
+</div>
+<h3 id="geometry-specificationsrequirements">Geometry Specifications/Requirements</h3>
+<p>Each tile specifies the pattern of geometry that the tile occupies. This is referred to as "geometry/tile specs", "geometry/tile requirements", or simply "specs". These specs in Rained are shown as green outlines behind the tile cursor in the level view. The specs for the first layer are shown as a bright green, and the specs for the second layer, if demanded by the tile, are shown as a dark green.</p>
+<figure>
+    <img alt="Tile cursor preview of &quot;Very Large Beam&quot;" src="img/tile-cursor-white.png" />
+</figure>
+<p>The requirement of each individual cell should be obvious—as it shows an outline of the required geometry type at that cell—except for two cases:</p>
+<ul>
+<li><strong>Unspecified</strong>: This will not show an outline at a given cell. This means that any kind of geometry is tolerated at that space, and if the tile is placed down with the "Force Geometry" modifier that space will not be modified.</li>
+<li><strong>Air</strong>: This will show as a cross, meaning that the geometry at that space must be an air cell.</li>
+</ul>
+<p>If the geometry underneath a tile does not match the geometry specifications, the tile cursor will be tinted red, and
+you will not be able to place the tile.</p>
+<p>This is a soft limitation, however: even with mismatched geometry, the tile will still render normally.</p>
+<h3 id="modifiers_1">Modifiers</h3>
+<p>Normally, you will not be able to place down a tile if the geometry under the cursor does not meet the specifications for the selected tile. In this case, the cursor tile preview will be colored red instead of white. However, you can force Rained to place down the tile regardless of the underlying geometry if you have either the "Force Placement" or "Force Geometry" modifiers active.</p>
+<p>In order to activate the "Force Placement" modifier, you must have the <kbd>F</kbd> key held down. Once this is active, you may
+place down a tile regardless of if the underlying geometry fits the requirements of tile's specs.</p>
+<p>The "Force Geometry" modifier, activated by holding down the <kbd>G</kbd> key, will instead, upon placement, modify the geometry underneath the newly placed tile to fit the tile specs. This way, you don't have to labouriously place the geometry down for any large or complex tiles. Additionally, if you remove a tile with "Force Geometry" active, it will remove the tile's required geometry along with the tile itself.</p>
+<p>The "Ignore Materials" modifier, active when holding down the <kbd>R</kbd> key, will disallow erasing materials.</p>
+<p>These modifiers also work with the rectangular-area fill/erase feature, but "Force Geometry" has a special behavior if you tap the key for a short amount of time while the rectangle is active. If <kbd>G</kbd> is tapped, it will place the required geometry for the already-placed tiles underneath the rectangle, and close the rectangle. Otherwise, geometry-forced tiles will be placed if the modifier is held down when the mouse button is released.</p>
+<h3 id="heads-and-bodies">Heads and Bodies</h3>
+<p>Rain World handles tiles differently than one would intuit. Normally, a tile appears as and behaves like a singular whole when editing, but, in reality, a tile, when whole, is a composition of multiple atomic parts: every cell within the tile is assigned to be a
+tile body, and the center of the tile is assigned to be the tile head.</p>
+<figure>
+    <img alt="Tile head highlighted." src="img/tilehead.png" />
+    <figcaption>A tile with its tile head marked by an X.</figcaption>
+</figure>
+<p>The tile head is required for a tile to exist, as it is the component that asserts the existence of the tile. It is
+surrounded by zero or more tile bodies, each of which store a reference to the location of their corresponding tile
+head. Rained knows which portion of the texture to render for each tile body based off their position relative to its
+tile head.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>You may highlight each tile head in the level by enabling <strong>View &gt; Tile Heads</strong>.</p>
+</div>
+<p>It is valid for a tile to be missing some tile bodies. You can do so by force-placing another tile over another one, which will remove some tile bodies of the tile being overlapped. However, you cannot place a tile in such a way that it overwrites the tile head, no matter what modifier you use, since, by doing so, all tile bodies reference by the tile head will become invalid.</p>
+<p>In regards to rendering, tile bodies that are missing do not cause the render to be missing those parts of the rendered tile; the tile in its entirety will still be rendered. However, it does affect how the geometry at that tile body is rendered. Without a tile body, the geometry will be rendered overlapping with the tile graphics, whereas with a tile body there will be no rendered geometry at that cell.</p>
+<h3 id="tile-graphics">Tile Graphics</h3>
+<p>The image displayed by default in Rained for the visual representation of tiles is not what actually gets rendered in-game. Rather, it is a crude representation of the tile. These images are, by default, used in place of the real tile graphics while editing the level due to concerns of performance and video memory. However, you can choose to have Rained render tile graphics using their actual in-game representation by toggling <strong>View &gt; Tile Graphics</strong>. Out of the box, tiles will be colored using their respective category colors, but for a more accurate in-game representation you may also enable palette rendering through the <strong>View &gt; Palettes</strong> window.</p>
+<p>Note that the tile graphics preview is inaccurate in regards to geometry rendering. When rendering, any cell that is occupied by a tile head or tile body will not have their geometry rendered so that the tile can display properly. This therefore means that if a tile requires solid geometry for any cell but has empty space in that portion of the graphic, Rained will display that cell as solid even though that cell will be invisible when rendering. A specific example of a tile that exhibits this behavior is "Ventilation Box Empty".</p>
+<figure>
+    <img alt="Ventilation Box Empty in Rained" src="img/ventbox-empty-preview.png" />
+    <figcaption>The tile as is displayed in Rained.</figcaption>
+</figure>
+<figure>
+    <img alt="Ventilation Box Empty in-game" src="img/ventbox-empty-render.png" />
+    <figcaption>The tile render as is shown in-game. Note how the solid geometry in the tile is not rendered.</figcaption>
+</figure>
+<h2 id="autotiles">Autotiles</h2>
+<p>Certain tiles are meant to be parts of a larger structure. Examples include fence tiles, SU patterns, SU grates, and pipes. The autotiling system is used to aid in the process of creating these structures.</p>
+<p>To use autotiles, you first must select the "Autotiles" tab in the Tile Selector window. There will be a list of autotiles under different drop-down categories. Select one from one of these categories in order to be able to use it.</p>
+<h3 id="types">Types</h3>
+<p>There are two different types of autotiles: <strong>Path</strong> autotiles and <strong>Rectangle</strong> autotiles.</p>
+<h4 id="rectangle-autotiles">Rectangle autotiles</h4>
+<p>These are used to create tile structures from a rectangular area. With the autotile selected, click and drag in the level view to define the rectangular area you want to modify. Once let go, the area will be autotiled.</p>
+<h4 id="path-autotiles">Path autotiles</h4>
+<p>These are used to create tile structures from a path. With the autotile selected, begin the path by pressing down the left mouse button, and move your mouse around the level to create nodes in the path. Upon letting go of the left mouse button, the path will be autotiled.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Hold <kbd>Shift</kbd> to draw straight lines.</p>
+</div>
+<h3 id="custom-autotiles">Custom autotiles</h3>
+<p>You can create path autotiles without the need for scripting. To do so, press the <strong>Create Autotile</strong> button, enter the name and category of the autotile, and press OK. Custom path autotiles, once selected, will have this as their configuration interface:</p>
+<figure>
+    <img alt="The configuration for a custom autotile." src="img/custom-path-autotile.png" />
+    <figcaption>The configuration for a custom autotile.</figcaption>
+</figure>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>As you may infer, some built-in autotiles use this custom autotile system.</p>
+</div>
+<p>With this interface, you may change which tiles the path autotile will use. Each tile needs to be 1x1 in size. You can also choose if you want the path you create to use junctions or place specific tiles on their caps, by turning on the relevant checkbox and specifying the tiles needed for the respective feature.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>For custom rectangle autotiles and advanced path autotiles, you will need to write Lua scripts. Check out what is located inside the <code>scripts</code> directory for information on how to do so.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["content.tabs.link"], "search": "assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>

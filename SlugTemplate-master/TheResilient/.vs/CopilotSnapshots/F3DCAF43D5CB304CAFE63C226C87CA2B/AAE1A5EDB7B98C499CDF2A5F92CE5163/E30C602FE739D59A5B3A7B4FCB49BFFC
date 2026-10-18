@@ -1,0 +1,31 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="TheResilient.slnx" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="BepInEx">
+      <HintPath>$(UserProfile)\Downloads\TheResilient - Copy\TheResilient - Copy\BobbleWeedScug\bin\Debug\net8.0\BepInEx.dll</HintPath>
+    </Reference>
+    <Reference Include="HOOKS-Assembly-CSharp">
+      <HintPath>$(UserProfile)\Downloads\TheResilient - Copy\TheResilient - Copy\BobbleWeedScug\bin\Debug\net8.0\HOOKS-Assembly-CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>$(UserProfile)\Downloads\TheResilient - Copy\TheResilient - Copy\BobbleWeedScug\bin\Debug\net8.0\PUBLIC-Assembly-CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine">
+      <HintPath>$(UserProfile)\Downloads\TheResilient - Copy\TheResilient - Copy\BobbleWeedScug\bin\Debug\net8.0\UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>$(UserProfile)\Downloads\TheResilient - Copy\TheResilient - Copy\BobbleWeedScug\bin\Debug\net8.0\UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
