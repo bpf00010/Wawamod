@@ -47,26 +47,43 @@ namespace TheResilient
             }
 
             //sets a starting index set equal to sprite leaser.sprites.length, which is the last index sprite array.
+
+            
             int startIndex = spriteLeaser.sprites.Length;
             WhiskerIndices.Add(self, new StrongBox<int>(startIndex));
 
 
             //expand by 2 for the whiskers.
 
-            System.Array.Resize(ref spriteLeaser.sprites, startIndex + 2);
+            System.Array.Resize(ref spriteLeaser.sprites, startIndex + 4);
 
 
             //try 2 bubble sprites??
             //remember where the index starts if you dont get it below
-            spriteLeaser.sprites[startIndex] = new FSprite("BubbleWeed", true);
-            spriteLeaser.sprites[startIndex + 1] = new FSprite("BubbleWeed", true);
+            //Just targeting DangleFruit0A does not work, have to build out 4 sprites, stalks + bubbles.
+            spriteLeaser.sprites[startIndex] = new FSprite("pixel", true);
+            spriteLeaser.sprites[startIndex + 1] = new FSprite("DangleFruit0A", true);
 
-            spriteLeaser.sprites[startIndex].scale = 0.5f;
-            spriteLeaser.sprites[startIndex + 1].scale = 0.5f;
+
+            spriteLeaser.sprites[startIndex + 2] = new FSprite("pixel", true);
+            spriteLeaser.sprites[startIndex + 3] = new FSprite("DangleFruit0A", true);
+
+            spriteLeaser.sprites[startIndex].scaleX = 2f; 
+            spriteLeaser.sprites[startIndex].scaleY = 12f;
+            spriteLeaser.sprites[startIndex + 2].scaleX = 2f; //stalks legnth + width
+            spriteLeaser.sprites[startIndex + 2].scaleY = 12f;
+
+            spriteLeaser.sprites[startIndex + 1].scale = 0.35f; //targeting bubbles here
+            spriteLeaser.sprites[startIndex + 3].scale = 0.35f;
+            spriteLeaser.sprites[startIndex + 3].scaleX = -0.35f;
+
             //trying a smaller scaling.
 
-
             self.AddToContainer(spriteLeaser, rCam, null);
+
+
+
+
 
 
         }
@@ -87,24 +104,31 @@ namespace TheResilient
             }
             int startIndex = whiskerIndexBox.Value;
 
+            if (startIndex + 3 >= spriteLeaser.sprites.Length)
+            {
+                return;
+            }
             FSprite head = spriteLeaser.sprites[3];
 
 
             //left
-            //try these values for now 9,2,15 (Ok but large)
-            spriteLeaser.sprites[startIndex].x = head.x - 9f;
-            spriteLeaser.sprites[startIndex].y = head.y + 2f;
-            spriteLeaser.sprites[startIndex].rotation = head.rotation - 15f;
+            spriteLeaser.sprites[startIndex].x = head.x - 7f;
+            spriteLeaser.sprites[startIndex].y = head.y + 1f;
+            spriteLeaser.sprites[startIndex].rotation = head.rotation - 40f;
+            
+            spriteLeaser.sprites[startIndex + 1].x = head.x - 14f;
+            spriteLeaser.sprites[startIndex + 1].y = head.y + 4f;
+            spriteLeaser.sprites[startIndex + 1].rotation = head.rotation - 40f;
 
+            //Right
+            spriteLeaser.sprites[startIndex + 2].x = head.x + 7f;
+            spriteLeaser.sprites[startIndex + 2].y = head.y + 1f;
+            spriteLeaser.sprites[startIndex + 2].rotation = head.rotation + 40f;
 
-            //right
-
-
-
-            //right
-            spriteLeaser.sprites[startIndex + 1].x = head.x + 9f;
-            spriteLeaser.sprites[startIndex + 1].y = head.y - 2f;
-            spriteLeaser.sprites[startIndex + 1].rotation = head.rotation + 15f;
+            
+            spriteLeaser.sprites[startIndex + 3].x = head.x + 14f;
+            spriteLeaser.sprites[startIndex + 3].y = head.y + 4f;
+            spriteLeaser.sprites[startIndex + 3].rotation = head.rotation + 40f;
 
 
         }
@@ -124,12 +148,13 @@ namespace TheResilient
             int startIndex = whiskerIndexBox.Value;
             FContainer midground = rCam.ReturnFContainer("Midground");
 
-            for (int i = 0; i < 2; i++)
+            for (int i = 0; i < 4; i++)
             {
-                if (startIndex + i < spriteLeaser.sprites.Length && spriteLeaser.sprites[startIndex + i] != null)
+                int index = startIndex + i;
+                if (index < spriteLeaser.sprites.Length && spriteLeaser.sprites[index] != null)
                 {
-                    spriteLeaser.sprites[startIndex + i].RemoveFromContainer();
-                    midground.AddChild(spriteLeaser.sprites[startIndex + i]);
+                    spriteLeaser.sprites[index].RemoveFromContainer();
+                    midground.AddChild(spriteLeaser.sprites[index]);
                 }
 
 
