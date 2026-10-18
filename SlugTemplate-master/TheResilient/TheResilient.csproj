@@ -1,27 +1,54 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-	<PropertyGroup>
-		<TargetFramework>net48</TargetFramework>
-		<LangVersion>latest</LangVersion>
-		<Nullable>disable</Nullable>
-		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
-	</PropertyGroup>
+  <PropertyGroup>
+    <TargetFramework>net48</TargetFramework>
+    <LangVersion>11</LangVersion>
+    <Nullable>disable</Nullable>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <OutputPath>..\mod\plugins\</OutputPath>
+  </PropertyGroup>
 
   <ItemGroup>
     <Reference Include="BepInEx">
-      <HintPath>$(UserProfile)\Downloads\TheResilient - Copy\TheResilient - Copy\BobbleWeedScug\bin\Debug\net8.0\BepInEx.dll</HintPath>
+      <HintPath>..\lib\BepInEx.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="HOOKS-Assembly-CSharp">
-      <HintPath>$(UserProfile)\Downloads\TheResilient - Copy\TheResilient - Copy\BobbleWeedScug\bin\Debug\net8.0\HOOKS-Assembly-CSharp.dll</HintPath>
+      <HintPath>..\lib\HOOKS-Assembly-CSharp.dll</HintPath>
+      <Private>False</Private>
     </Reference>
-    <Reference Include="Assembly-CSharp">
-      <HintPath>$(UserProfile)\Downloads\TheResilient - Copy\TheResilient - Copy\BobbleWeedScug\bin\Debug\net8.0\PUBLIC-Assembly-CSharp.dll</HintPath>
+    <Reference Include="PUBLIC-Assembly-CSharp">
+      <HintPath>..\lib\PUBLIC-Assembly-CSharp.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine">
-      <HintPath>$(UserProfile)\Downloads\TheResilient - Copy\TheResilient - Copy\BobbleWeedScug\bin\Debug\net8.0\UnityEngine.dll</HintPath>
+      <HintPath>..\lib\UnityEngine.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.CoreModule">
-      <HintPath>$(UserProfile)\Downloads\TheResilient - Copy\TheResilient - Copy\BobbleWeedScug\bin\Debug\net8.0\UnityEngine.CoreModule.dll</HintPath>
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<HintPath>..\lib\UnityEngine.CoreModule.dll</HintPath>
+
+      <Private>False</Private>
     </Reference>
   </ItemGroup>
 

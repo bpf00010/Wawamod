@@ -1,0 +1,10 @@
+C:\Users\Brenden Furlong\Documents\Wawamod\SlugTemplate-master\TheResilient\obj\Debug\TheResilient.csproj.AssemblyReference.cache
+C:\Users\Brenden Furlong\Documents\Wawamod\SlugTemplate-master\TheResilient\obj\Debug\TheResilient.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Brenden Furlong\Documents\Wawamod\SlugTemplate-master\TheResilient\obj\Debug\TheResilient.AssemblyInfoInputs.cache
+C:\Users\Brenden Furlong\Documents\Wawamod\SlugTemplate-master\TheResilient\obj\Debug\TheResilient.AssemblyInfo.cs
+C:\Users\Brenden Furlong\Documents\Wawamod\SlugTemplate-master\TheResilient\obj\Debug\TheResilient.csproj.CoreCompileInputs.cache
+C:\Users\Brenden Furlong\Documents\Wawamod\SlugTemplate-master\TheResilient\obj\Debug\TheResilient.sourcelink.json
+C:\Users\Brenden Furlong\Documents\Wawamod\SlugTemplate-master\mod\plugins\TheResilient.dll
+C:\Users\Brenden Furlong\Documents\Wawamod\SlugTemplate-master\mod\plugins\TheResilient.pdb
+C:\Users\Brenden Furlong\Documents\Wawamod\SlugTemplate-master\TheResilient\obj\Debug\TheResilient.dll
+C:\Users\Brenden Furlong\Documents\Wawamod\SlugTemplate-master\TheResilient\obj\Debug\TheResilient.pdb

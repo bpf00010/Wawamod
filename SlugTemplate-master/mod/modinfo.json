@@ -1,0 +1,9 @@
+﻿{
+  "id": "klovar.theresilient",
+  "name": "The Resilient",
+  "version": "1.0.0",
+  "authors": "Brenden Furlong & Klovar",
+  "description": "A Bubbleweed Slugcat campaign set in a deeply flooded Rivulet world.",
+  "requirements": [ "slime-cubed.slugbase", "moreslugcats" ],
+  "requirements_names": [ "SlugBase", "More Slugcats Expansion" ]
+}
