@@ -1,9 +1,19 @@
 ﻿{
   "id": "TheResilient",
   "name": "The Resilient",
-  "description": "A resilient aquatic slugcat.",
+  "description": "An aquatic slugcat sustained by internal bubbleweed air sacs, navigating a deeply submerged world.",
   "features": {
     "color": "2E8B57",
-    "world_state": [ "Rivulet" ]
+    "world_state": [ "Rivulet" ],
+    "timeline_before": "Saint",
+    "timeline_after": "Rivulet",
+    "start_room": "DS_RIVSTART",
+    "food_min": 5,
+    "food_max": 7,
+    "diet": {
+      "base": "Rivulet",
+      "plants": 1.0
+    },
+    "select_menu_scene": "Slugcat_TheResilient"
   }
 }

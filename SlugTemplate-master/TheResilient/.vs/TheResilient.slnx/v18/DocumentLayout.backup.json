@@ -24,8 +24,12 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -34,14 +38,10 @@
               "RelativeDocumentMoniker": "TheResilientMain.cs",
               "ToolTip": "C:\\Users\\Brenden Furlong\\Documents\\Wawamod\\SlugTemplate-master\\TheResilient\\TheResilientMain.cs",
               "RelativeToolTip": "TheResilientMain.cs",
-              "ViewState": "AgIAAGgAAAAAAAAAAAAuwIIAAABPAAAAAAAAAA==",
+              "ViewState": "AgIAAEwAAAAAAAAAAAAswE8AAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-10-18T19:42:04.968Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
               "$type": "Document",
@@ -53,8 +53,7 @@
               "RelativeToolTip": "..\\mod\\slugbase\\theresilient.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-10-18T15:19:48.62Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-18T15:19:48.62Z"
             },
             {
               "$type": "Document",

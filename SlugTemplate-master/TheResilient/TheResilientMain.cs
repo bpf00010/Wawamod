@@ -21,7 +21,12 @@ namespace TheResilient
         public static readonly SlugcatStats.Name ResilientName = new SlugcatStats.Name("TheResilient", false);
 
 
-        public static readonly ConditionalWeakTable<PlayerGraphics, StrongBox<int>> WhiskerIndices = new();
+        private const int BubbleSpriteCount = 8; // Number of bubble sprites to add
+        private const float BubbleRadius = 0.35f;
+
+        private const float StemWidth = 1.5f;
+
+        public static readonly ConditionalWeakTable<RoomCamera.SpriteLeaser, StrongBox<int>> BubbleIndices = new();
 
         private void OnEnable()
         {
@@ -48,16 +53,42 @@ namespace TheResilient
 
             //sets a starting index set equal to sprite leaser.sprites.length, which is the last index sprite array.
 
-            
+
             int startIndex = spriteLeaser.sprites.Length;
-            WhiskerIndices.Add(self, new StrongBox<int>(startIndex));
+            BubbleIndices.Remove(spriteLeaser);
+            BubbleIndices.Add(spriteLeaser, new StrongBox<int>(startIndex));
 
 
-            //expand by 2 for the whiskers.
 
-            System.Array.Resize(ref spriteLeaser.sprites, startIndex + 4);
+            //Now sets the bubble sprite count to the start index + bubble sprite count, which is 8, so we can add 8 sprites to the array.
+
+            System.Array.Resize(ref spriteLeaser.sprites, startIndex + BubbleSpriteCount);
 
 
+
+
+
+
+
+
+
+            for (int side = 0; side < 2; side++)
+            {
+                int index = startIndex + side * 4; //Side *4
+                spriteLeaser.sprites[index] = new FSprite("pixel", true); //Stalk
+                spriteLeaser.sprites[index].anchorY = 0f; //Anchor at bottom
+
+                spriteLeaser.sprites[index + 1] = new FSprite("Circle20", true); //Bubble
+                spriteLeaser.sprites[index + 2] = new FSprite("Circl20", true); //Bubble
+
+
+            }
+
+
+
+
+
+            /*
             //try 2 bubble sprites??
             //remember where the index starts if you dont get it below
             //Just targeting DangleFruit0A does not work, have to build out 4 sprites, stalks + bubbles.
@@ -81,12 +112,12 @@ namespace TheResilient
 
             self.AddToContainer(spriteLeaser, rCam, null);
 
+            */
 
 
 
 
-
-        }
+        }   
 
 
         private void PlayerGraphics_DrawSprites(On.PlayerGraphics.orig_DrawSprites orig, PlayerGraphics self, RoomCamera.SpriteLeaser spriteLeaser, RoomCamera rCam, float timeStacker, Vector2 camPos)
@@ -98,7 +129,7 @@ namespace TheResilient
                 return;
             }
             //
-            if (!WhiskerIndices.TryGetValue(self, out StrongBox<int> whiskerIndexBox))
+            if (!BubbleIndices.TryGetValue(self, out StrongBox<int> whiskerIndexBox))
             {
                 return;
             }

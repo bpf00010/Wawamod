@@ -1,0 +1,35 @@
+﻿{
+  "id": "Slugcat_TheResilient",
+  "scene_folder": "slugbase/scenes",
+  "images": [
+    {
+      "name": "Backround",
+      "pos": [ 483, 184 ],
+      "depth": 3.5,
+      "shader": "Basic"
+    },
+    {
+      "name": "Slugcat",
+      "pos": [ 483, 184 ],
+      "depth": 2.0,
+      "shader": "Basic"
+    },
+    {
+      "name": "Grass 2",
+      "pos": [ 483, 184 ],
+      "depth": 1.8,
+      "shader": "Basic"
+    },
+    {
+      "name": "Grass 1",
+      "pos": [ 483, 184 ],
+      "depth": 1.5,
+      "shader": "Basic"
+    }
+  ],
+  "idle_depths": [ 2.0 ],
+  "glow_pos": [ 683, 384 ],
+  "mark_pos": [ 683, 520 ],
+  "select_menu_pos": [ 0, 0 ],
+  "slugcat_depth": 2.0
+}
