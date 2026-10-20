@@ -4,10 +4,12 @@
   "description": "An aquatic slugcat sustained by internal bubbleweed air sacs, navigating a deeply submerged world.",
   "features": {
     "color": "2E8B57",
+    "walk_speed": 0.75,
+    "lung_capacity": 6.67,
     "world_state": [ "Rivulet" ],
     "timeline_before": "Saint",
     "timeline_after": "Rivulet",
-    "start_room": "DS_RIVSTART",
+    "start_room": "GW_B01",
     "food_min": 5,
     "food_max": 7,
     "diet": {
